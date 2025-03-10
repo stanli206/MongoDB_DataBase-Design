@@ -1,0 +1,2 @@
+//Find the number of problems solved by the user in codekata
+db.codekata.find({}, { user_id: 1, problems_solved: 1 });
