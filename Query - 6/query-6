@@ -1,0 +1,4 @@
+//6.Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+
+db.attendance.find({ date: { $gte: new Date("2020-10-15"), $lte: new Date("2020-10-31") }, status: "Absent" });
+db.tasks.find({ date: { $gte: new Date("2020-10-15"), $lte: new Date("2020-10-31") }, submitted: false });
